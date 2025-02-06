@@ -34,14 +34,15 @@
   "variables": {
     "resourceName": "[if(not(empty(parameters('name'))), replace(parameters('name'), ' ', '-'), format('a{0}', uniqueString(resourceGroup().id)))]",
     "hostingPlanName": "[format('{0}-hp', variables('resourceName'))]",
-    "webAppName": "[format('{0}-web', variables('resourceName'))]"
+    "webAppName": "[format('{0}-web', variables('resourceName'))]",
+    "location": "[parameters('location')]"
   },
   "resources": [
     {
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2022-03-01",
       "name": "[variables('hostingPlanName')]",
-      "location": "[parameters('location')]",
+      "location": "[variables('location')]",
       "sku": {
         "tier": "Standard",
         "name": "S1"
@@ -52,7 +53,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2022-03-01",
       "name": "[variables('webAppName')]",
-      "location": "[parameters('location')]",
+      "location": "[variables('location')]",
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
       },
