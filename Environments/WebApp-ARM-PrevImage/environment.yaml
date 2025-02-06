@@ -12,3 +12,8 @@ parameters:
     description: 'Name of the Web App.'
     type: string
     required: true
+  - id: location
+    name: Location
+    description: 'The Location of the Web App.'
+    type: string
+    required: true  
