@@ -3,7 +3,7 @@ name: FunctionAppUpdatedImage
 version: 1.0.0
 summary: Azure Function App Environment
 description: Deploys an Azure Function App, Storage Account, and Application Insights
-runner: acradamasmarimageupdates.azurecr.io/deployment-environments/runners/arm:dual-7.0.0
+runner: acradamasmarimageupdates.azurecr.io/deployment-environments/runners/arm:dual-10.0.0
 templatePath: azuredeploy.json
 
 parameters:
