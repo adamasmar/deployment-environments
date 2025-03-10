@@ -3,7 +3,7 @@ name: WebApp-ARM-UpdatedImage
 version: 1.0.0
 summary: Azure Web App Environment
 description: Deploys an Azure Web App without a data store
-runner: acradamasmarimageupdates.azurecr.io/deployment-environments/runners/arm:dual-99.0.0
+runner: acradamasmarimageupdates.azurecr.io/tempinttest:latest
 templatePath: azuredeploy.json
 
 parameters:
